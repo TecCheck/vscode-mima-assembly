@@ -1,0 +1,59 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Mima Assembly",
+	"patterns": [
+		{
+			"match": ";.*$",
+			"name": "comment.line"
+		},
+		{
+			"match": "#?\\b(0x)[0-9a-fA-F]+\\b",
+			"name": "constant.numeric.hex"
+		},
+		{
+			"match": "#?\\b(0b)[01]+\\b",
+			"name": "constant.numeric.bin"
+		},
+		{
+			"match": "#?\\b(-)?[0-9]+\\b",
+			"name": "constant.numeric.dec"
+		},
+		{
+			"match": "#?\\b0[0-7]+\\b",
+			"name": "constant.numeric.oct"
+		},
+		{
+			"match": "(?i)\\S+ (?=macro)",
+			"name": "entity.name.section"
+		},
+		{
+			"match": "^\\s*\\.?\\w+:\\s*(?=|:)",
+			"name": "entity.name.section"
+		},
+		{
+			"match": "\\$[^i]",
+			"name": "entity.name.section"
+		},
+		{
+			"match": "(?i)\\b(add)\\b",
+			"name": "keyword.mnemonic.math"
+		},
+		{
+			"match": "(?i)\\b(and|or|xor|not|rar)\\b",
+			"name": "keyword.mnemonic.logic"
+		},
+		{
+			"match": "(?i)\\b(jmp|jmn)\\b",
+			"name": "keyword.mnemonic.flow"
+		},
+		{
+			"match": "(?i)\\b(ldc|ldv|stv|ldiv|stiv)\\b",
+			"name": "keyword.mnemonic.data"
+		},
+		{
+			"match": "(?i)\\b(eql|halt)\\b",
+			"name": "support.function"
+		}
+	],
+	"scopeName": "source.asm.mima"
+}

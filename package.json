@@ -1,0 +1,27 @@
+{
+    "name": "miima-assembly",
+    "displayName": "Mima Assembly",
+    "description": "mima assembly language support",
+    "version": "0.0.1",
+    "publisher": "TecCheck",
+    "repository": "https://github.com/TecCheck/vscode-mima-assembly",
+    "engines": {
+        "vscode": "^1.52.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "mima",
+            "aliases": ["Mima Assembly", "mima"],
+            "extensions": [".mima"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "mima",
+            "scopeName": "source.asm.mima",
+            "path": "./syntaxes/mima.tmLanguage.json"
+        }]
+    }
+}
